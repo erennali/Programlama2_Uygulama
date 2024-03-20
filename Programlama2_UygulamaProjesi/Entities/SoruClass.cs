@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities.Entities;
+namespace Programlama2_UygulamaProjesi.Entities;
 
 public class SoruClass
 {
@@ -13,8 +13,8 @@ public class SoruClass
     public int KonuId { get; set; }
     public enum ZorlukDerecesi
     {
-        Kolay=1,
-        Orta=2,
-        Zor=3
+        Kolay = 1,
+        Orta = 2,
+        Zor = 3
     }
 }

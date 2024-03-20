@@ -1,5 +1,5 @@
-﻿using Entities.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Programlama2_UygulamaProjesi.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +10,9 @@ namespace Entities.DbContextFolder;
 
 public class OdevDbContext : DbContext
 {
-    public DbSet<KonuClass> Subjects { get; set; }
-    public DbSet<SoruClass> Questions { get; set; }
+    public DbSet<KonuClass> Konular { get; set; }
+    public DbSet<SoruClass> Sorular { get; set; }
+    public DbSet<SoruCevap> SoruAndCevap { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
