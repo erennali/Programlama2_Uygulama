@@ -1,0 +1,6 @@
+@Programlama2_UygulamaProjesi_HostAddress = http://localhost:5218
+
+GET {{Programlama2_UygulamaProjesi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
