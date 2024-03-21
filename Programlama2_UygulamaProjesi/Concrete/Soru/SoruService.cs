@@ -5,11 +5,11 @@ using Programlama2_UygulamaProjesi.Entities;
 using static Programlama2_UygulamaProjesi.Entities.SoruClass;
 
 
-namespace Programlama2_UygulamaProjesi.Concrete
+namespace Programlama2_UygulamaProjesi.Concrete.SoruConcrete
 {
     public class SoruService : ISoruService
     {
-        private  OdevDbContext _context;
+        private OdevDbContext _context;
 
         public SoruService(OdevDbContext context)
         {
@@ -96,16 +96,16 @@ namespace Programlama2_UygulamaProjesi.Concrete
 
             var soru = new SoruClass
             {
-                Id=Guid.NewGuid(),
+                Id = Guid.NewGuid(),
                 SoruKoku = input.SoruKoku,
                 KonuId = input.KonuId,
-                ZorlukDerecesi= input.ZorlukDerecesi
+                ZorlukDerecesi = input.ZorlukDerecesi
             };
 
-            
+
             _context.Sorular.Add(soru);
 
-            
+
             _context.SaveChanges();
         }
 
@@ -118,7 +118,7 @@ namespace Programlama2_UygulamaProjesi.Concrete
                 throw new Exception("Soru bulunamadı");
             }
 
-          
+
             soru.SoruKoku = input.SoruKoku;
             soru.KonuId = input.KonuId;
             soru.ZorlukDerecesi = input.ZorlukDerecesi;
@@ -127,7 +127,7 @@ namespace Programlama2_UygulamaProjesi.Concrete
             _context.SaveChanges();
         }
 
-    
+
     }
 }
 

@@ -1,4 +1,4 @@
-﻿using Programlama2_UygulamaProjesi.Concrete;
+﻿using Programlama2_UygulamaProjesi.Concrete.Dtos.KonuDto;
 
 namespace Programlama2_UygulamaProjesi.Abstracts
 {

@@ -1,4 +1,4 @@
-﻿namespace Programlama2_UygulamaProjesi.Concrete
+﻿namespace Programlama2_UygulamaProjesi.Concrete.Dtos.KonuDto
 {
     public class KonuEkleDto
     {

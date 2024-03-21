@@ -2,7 +2,8 @@
 using Entities.DbContextFolder;
 using Microsoft.EntityFrameworkCore;
 using Programlama2_UygulamaProjesi.Abstracts;
-using Programlama2_UygulamaProjesi.Concrete;
+using Programlama2_UygulamaProjesi.Concrete.Konu;
+using Programlama2_UygulamaProjesi.Concrete.SoruConcrete;
 
 namespace denemee
 {

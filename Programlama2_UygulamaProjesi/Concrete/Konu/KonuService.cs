@@ -1,6 +1,6 @@
 ﻿using Entities.DbContextFolder;
 using Programlama2_UygulamaProjesi.Abstracts;
-using Programlama2_UygulamaProjesi.Concrete;
+using Programlama2_UygulamaProjesi.Concrete.Dtos.KonuDto;
 using Programlama2_UygulamaProjesi.Entities;
 using System;
 
