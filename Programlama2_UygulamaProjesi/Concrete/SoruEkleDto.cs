@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Programlama2_UygulamaProjesi.Entities;
+using System;
 using static Programlama2_UygulamaProjesi.Entities.SoruClass;
 
 public class SoruEkleDto

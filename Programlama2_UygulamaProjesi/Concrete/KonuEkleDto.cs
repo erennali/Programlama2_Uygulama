@@ -3,6 +3,6 @@
     public class KonuEkleDto
     {
         public string KonuAdi { get; set; }
-        public int ParentId { get; set; }
+        public int? ParentId { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using static Programlama2_UygulamaProjesi.Entities.SoruClass;
+﻿using Programlama2_UygulamaProjesi.Entities;
+using static Programlama2_UygulamaProjesi.Entities.SoruClass;
 
 public class SoruSecimKriterDto
 {

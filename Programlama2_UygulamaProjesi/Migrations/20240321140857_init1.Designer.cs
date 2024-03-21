@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Programlama2_UygulamaProjesi.Migrations
 {
     [DbContext(typeof(OdevDbContext))]
-    [Migration("20240320083833_init1")]
+    [Migration("20240321140857_init1")]
     partial class init1
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace Programlama2_UygulamaProjesi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Entities.Entities.KonuClass", b =>
+            modelBuilder.Entity("Programlama2_UygulamaProjesi.Entities.KonuClass", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,7 +36,7 @@ namespace Programlama2_UygulamaProjesi.Migrations
                     b.Property<DateTime>("KayitTarihi")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("KonuAdi")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -45,10 +45,10 @@ namespace Programlama2_UygulamaProjesi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Subjects");
+                    b.ToTable("Konular");
                 });
 
-            modelBuilder.Entity("Entities.Entities.SoruClass", b =>
+            modelBuilder.Entity("Programlama2_UygulamaProjesi.Entities.SoruClass", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -61,9 +61,33 @@ namespace Programlama2_UygulamaProjesi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ZorlukDerecesi")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Questions");
+                    b.ToTable("Sorular");
+                });
+
+            modelBuilder.Entity("SoruCevap", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Cevap")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Sira")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("SoruId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SoruAndCevap");
                 });
 #pragma warning restore 612, 618
         }

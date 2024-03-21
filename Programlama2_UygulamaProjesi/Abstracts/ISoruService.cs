@@ -1,4 +1,7 @@
-﻿namespace Programlama2_UygulamaProjesi.Abstracts
+﻿using Programlama2_UygulamaProjesi.Abstracts;
+using System;
+
+namespace Programlama2_UygulamaProjesi.Abstracts
 {
     public interface ISoruService
     {
@@ -8,3 +11,4 @@
         SinavSonucDto SinavSonucunuHesapla(SinavSonucunuHesaplaInput input);
     }
 }
+
